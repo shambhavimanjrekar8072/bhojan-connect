@@ -1,0 +1,36 @@
+.login-container{
+    height:88vh;
+    background-color:#660B05;
+}
+
+.heading_style{
+    color:#3E0703;
+    text-decoration: underline;
+}
+
+.login-box{
+    background-color:#FFF0C4;
+    height:50vh;
+    width:30vw;
+    border-radius:15px;
+    border: 2px solid white;
+}
+
+.input-styling{
+    width:25vw;
+}
+
+.button-styling{
+    background-color: #3E0703;
+    width:25vw;
+    color:white;
+    border-radius:8px;
+    height:5vh;
+}
+
+.button-styling:hover{
+    background-color: #3E0703;
+    color:white;
+    text-decoration: underline;
+    transform: scale(1.02,1.02);
+}

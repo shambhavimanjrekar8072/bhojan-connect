@@ -1,0 +1,36 @@
+
+
+.list-container{
+    border-top: 2px solid white;
+      background-color:#660B05;
+}
+
+h2{
+    color:white;
+    text-decoration: underline;
+}
+h4{
+    text-decoration: underline;
+}
+
+.list-item-styling{
+    border:5px double white;
+    border-radius:10px;
+    background-color:white;
+    width:65vw;
+    list-style-type: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.book-styling{
+    background-color:green;
+    color:white;
+    border-radius:15px;
+    border:none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.book-styling:hover{
+    text-decoration: underline;
+    transform:scale(1.05,1.05);
+}

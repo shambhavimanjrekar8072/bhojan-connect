@@ -1,0 +1,16 @@
+.signup-container{
+    height:88vh;
+    background-color:#660B05;
+}
+
+.signup-box{
+    background-color:#FFF0C4;
+    height:70vh;
+    width:30vw;
+    border-radius:15px;
+    border: 2px solid white;
+}
+
+.input-styling{
+    width:25vw;
+}

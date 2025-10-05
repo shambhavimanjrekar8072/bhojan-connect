@@ -1,0 +1,23 @@
+
+
+.navstyle{
+    background-color: white;
+    height:12vh;
+    border-bottom:2px solid #842A3B;
+    border-top:2px solid #842A3B;
+}
+
+.logo_styling{
+    max-height:fit-content;
+    width:6vw;
+}
+
+
+.nav_item_styling:hover{
+    transform: scale(1.07,1.07);
+}
+
+.nav-item .nav-link{
+    color: #842A3B;
+    text-decoration: underline;
+}

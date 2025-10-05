@@ -1,0 +1,46 @@
+.bg-image{
+    height:88vh;
+    width:100vw;
+    background-image: url('../assets/images/sharing_food.jpg');
+    background-size: 100% 100%;
+}
+
+h3{
+    color:#3E0703;
+    text-decoration: underline;
+}
+
+.type_user{
+    height:20vh;
+    width:50vh;
+    background-color: rgb(238, 223, 223);
+    opacity:0.9;
+    border-radius:15px;
+    border:2px solid rgb(92, 91, 91);
+}
+
+.user-type label{
+    color:rgb(92, 91, 91);
+}
+
+.btn_styling{
+    background-color:#3E0703;
+    color:white;
+    border:1px solid white;  
+    height:5vh; 
+    border-radius:7px;
+}
+
+.btn_styling:hover{
+    background-color:#3E0703;
+    color:white;
+    border:1px solid white;   
+    text-decoration: underline;
+    transform: scale(1.02,1.02);
+}
+
+.select_styling{
+    height:8vh;
+    width:15vw;
+}
+
