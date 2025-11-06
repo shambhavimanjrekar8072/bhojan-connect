@@ -1,0 +1,20 @@
+
+.button_styling {
+    border-radius: 50px; 
+    border:5px double #660B05; 
+    background:transparent;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  
+}
+
+
+.button_styling:hover {
+    transform: scale(1.2);
+ 
+}
+
+
+.nav-link{
+    color: #842A3B;
+    text-decoration: underline;
+}

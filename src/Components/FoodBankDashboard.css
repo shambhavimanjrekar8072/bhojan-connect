@@ -1,0 +1,29 @@
+.page_styling{
+    background-color: #660B05;
+    height:90vh;
+    width:100vw;
+}
+
+.table_styling{
+    border-collapse: separate;
+    overflow: hidden;
+    border-spacing:0;
+    border: 6px double white;
+    text-align:center;
+    border-radius:20px;
+    width:70vw;
+    height:70vh;
+    background-color:transparent;
+    color:white;
+}
+
+thead th{
+
+    border-bottom:2px solid white;
+   
+}
+
+tr{
+    height:7vh;
+  
+}

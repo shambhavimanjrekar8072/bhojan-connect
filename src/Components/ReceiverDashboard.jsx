@@ -1,11 +1,12 @@
 import React from "react";
+
 import MapComponent from "./MapComponent";
-import NavigationBar from "./Navigation_Bar/NavigationBar";
+import NavbarFoodbank from "./NavbarFoodbank";
 
 function ReceiverDashboard(){
     return(
         <>
-        <NavigationBar/>
+        <NavbarFoodbank/>
         <MapComponent/>
         </>
     )

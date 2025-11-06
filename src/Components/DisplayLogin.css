@@ -1,6 +1,7 @@
 .login-container{
     height:88vh;
-    background-color:#660B05;
+    background-image: url('../assets/images/sharing_food.jpg');
+    background-size: 100% 100%;
 }
 
 .heading_style{
@@ -9,15 +10,17 @@
 }
 
 .login-box{
-    background-color:#FFF0C4;
+    background-color:white;
+    opacity:0.8;
     height:50vh;
     width:30vw;
     border-radius:15px;
-    border: 2px solid white;
+    border: 3px solid #3E0703;
 }
 
 .input-styling{
     width:25vw;
+    border:1px solid gray;
 }
 
 .button-styling{

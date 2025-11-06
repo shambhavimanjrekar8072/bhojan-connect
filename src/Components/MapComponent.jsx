@@ -1,6 +1,5 @@
 import React,{useState, useEffect, useMemo} from "react";
 import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
-import NavigationBar from "./Navigation_Bar/NavigationBar";
 import "./MapComponent.css";
 
 const mapContainerStyle = {
@@ -103,7 +102,7 @@ function MapComponent(){
         <Marker key={index} position={location} />
       ))}
       </GoogleMap>
-        <div className="d-flex flex-column justify-content-center align-items-center mt-1 list-container pt-2">
+        <div className="d-flex flex-column justify-content-center align-items-center mt-1 list-container pt-2 py-3">
         <h2 className="fw-bold py-3">Food Banks Near You</h2>
         <ul>
           {foodBankLocations.map((bank, index) => (
@@ -120,9 +119,8 @@ function MapComponent(){
             </div>
             </li>
           ))}
-        </ul>
-      </div>
-
+          </ul>
+        </div> 
     </div>
     )
 }
