@@ -22,7 +22,7 @@ function DisplayLogin(){
       }
     }
 
-    const handleLogin = (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
         setError('');
         if (!userType) {
@@ -38,11 +38,11 @@ function DisplayLogin(){
                 apiUrl = 'http://localhost:8000/recipient/login';
                 dashboardPath = '/receiver-dashboard';
                 break;
-            case "Donor":
+            case "donor":
                 apiUrl = 'http://localhost:8000/donor/login';
                 dashboardPath = '/donor-dashboard';
                 break;
-            case "NGO":
+            case "ngo":
                 apiUrl = 'http://localhost:8000/ngo/login';
                 dashboardPath = '/food-bank-dashboard';
                 break;
@@ -54,6 +54,21 @@ function DisplayLogin(){
         try{
           const response = await axios.post(apiUrl, formData);
           console.log("Login Success:", response.data);
+          switch (userType) {
+            case "recipient":
+              localStorage.setItem("id" , response.data.recipient._id);
+              break;
+            case "donor":
+              localStorage.setItem("id" , response.data.donor._id);
+                break;
+            case "ngo":
+                localStorage.setItem("id" , response.data.ngo._id);
+                break;
+            default:
+                setError("Invalid user type selected.");
+                return;
+        }
+
           navigate(dashboardPath);
         } catch(err){
           console.error("Login Error:", err.response ? err.response.data : err.message);
@@ -75,9 +90,9 @@ function DisplayLogin(){
             <label className="form-label">Receiver</label>
             <input type="radio" className="ms-1 me-5" name="userType" value="recipient" onChange={handleChange} checked={userType === "recipient"}/>
             <label className="form-label">Donor</label>
-            <input type="radio" className="ms-1 me-5" name="userType" value="Donor" onChange={handleChange} checked={userType === "Donor"}/>
+            <input type="radio" className="ms-1 me-5" name="userType" value="donor" onChange={handleChange} checked={userType === "donor"}/>
             <label className="form-label">Food Bank</label>
-            <input type="radio" className="ms-1" name="userType" value="NGO" onChange={handleChange} checked={userType === "NGO"}/>
+            <input type="radio" className="ms-1" name="userType" value="ngo" onChange={handleChange} checked={userType === "ngo"}/>
             </div>
             <label htmlFor="email" className="form-label">Email address</label>
             <input type="email" className="form-control input-styling me-2" name="email" placeholder="Enter your email" onChange={handleChange} value={formData.email} required/>

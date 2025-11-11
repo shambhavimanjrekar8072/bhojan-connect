@@ -1,9 +1,18 @@
 import React from 'react';
 import logo from '../assets/images/Logo.png';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './NavbarFoodbank.css';
 
 function NavbarFoodbank(){
+
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        localStorage.clear();
+
+        navigate('/');
+    }
+
     return(
         <navbar className="navbar navbar-expand-lg navstyle">
         <nav className="navbar navbar-expand-lg navstyle me-auto">
@@ -27,11 +36,7 @@ function NavbarFoodbank(){
         <nav className="me-2 logout_button">
             <div>
             
-            <button className="btn btn-lg button_styling fs-5 me-3 align-text-center px-3 py-1" type="button">
-                    <Link to="/" className="nav-link">
-                    Logout
-                    </Link>
-                </button>
+            <button className="btn btn-lg button_styling fs-5 me-3 align-text-center px-3 py-1" type="button" onClick={handleLogout}> Logout</button>
                 
             </div>
         </nav>
